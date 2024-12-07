@@ -1,5 +1,99 @@
+import SiteLink from "@/components/SiteLink";
+import Image from "next/image";
+import Link from "next/link";
+
 const Home = () => {
-  return <div className=""></div>;
+  const Links = [
+    {
+      name: "Levegő BéEnBé",
+      description: "Development oldal",
+      image: "/flood.svg",
+      link: "https://berles.gemes.eu/ ",
+    },
+    {
+      name: "Figma",
+      description: "Figma - dizájn",
+      image: "/figma_logo.svg",
+      link: "https://www.figma.com/design/PG29cx0CPSSPaUGA1EnXQb/Lakásbérlés?node-id=177-111&t=kgUvxpevGtyb6EFS-1",
+    },
+    {
+      name: "Notion",
+      description: "Notion - task manager",
+      image: "/notion.svg",
+      link: "https://fuschia-bonsai-488.notion.site/Lak-sb-rl-oldal-99198df203fc43aa9efdd9b9e0ebeb21?pvs=4",
+    },
+    {
+      name: "GitHub",
+      description: "Github - forráskód",
+      image: "/github.svg",
+      link: "https://github.com/Kedves1/Lakasberles/",
+    },
+  ];
+  return (
+    <>
+      <main className="w-screen h-screen flex justify-center items-center flex-col gap-0">
+        <div className="text-[120pt] font-semibold">Infoctopus</div>
+        <div className="text-2xl">
+          Forradalmi weboldalak a jövő technikusaitól
+        </div>
+        <Link
+          href={"/about"}
+          className="bg-[#4043FC] py-2 px-4 rounded-xl mt-10"
+        >
+          Tudj meg többet
+        </Link>
+      </main>
+      <section className="h-screen w-screen flex justify-center items-center flex-col pt-[80px]">
+        <div className="bg-[#2F2D2D] max-w-[900px] w-full h-fit rounded-3xl relative p-10 pb-14 mt-5">
+          <div className="flex flex-shrink-0">
+            <div className="absolute top-[-90px] left-0 text-7xl font-semibold">
+              Fő projektünk
+            </div>
+            <span className="">
+              <h1 className="text-3xl font-semibold ">Levegő BéEnBé</h1>
+              <p>
+                A projekt 2024. szeptember 17-én indult a HSZC Szentesi Pollák
+                Antal Technikum Info I.-es terméból projektmunka órán.
+              </p>
+              <p>
+                A weboldal a Next.js keretrendszeren fut PayloadCMS backend-el
+                ami segítségével egy gyorsan és jól működkő lakásberlő weboldal
+                jött létre, az AirBnB nevű híresebb lakásbérlő oldal mintájára.
+              </p>
+              <p>
+                A weboldal 2025. január 17.-én készül el, addig az alábbi
+                linkeken elérhető a fejlesztési folyamat:
+              </p>
+            </span>
+
+            <Image
+              src={"/project-image.png"}
+              className="rounded-3xl flex-shrink-0"
+              alt="airbnb"
+              width={400}
+              height={300}
+            />
+          </div>
+          <div className="ml-[500px] text-white/70">
+            Egy lakás oldal template
+          </div>
+          <div className="flex justify-between mt-10">
+            {Links.map((link) => {
+              return (
+                <SiteLink
+                  image={link.image}
+                  name={link.image}
+                  description={link.description}
+                  key={link.name}
+                  link={link.link}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Home;

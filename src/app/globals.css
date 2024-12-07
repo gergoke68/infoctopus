@@ -63,4 +63,27 @@
   body {
     background: linear-gradient(180deg, #f374e2 0%, #6b0d85 50%, #2a0135 100%);
   }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  p {
+    @apply mt-5;
+  }
 }
