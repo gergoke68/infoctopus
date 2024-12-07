@@ -1,8 +1,50 @@
+"use client";
 import SiteLink from "@/components/SiteLink";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
+  const sectionRef = useRef(null);
+  const mainTextRef = useRef<HTMLDivElement>(null);
+  const subTextRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-float-in");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    if (mainTextRef.current) {
+      mainTextRef.current.classList.add("animate-float-in");
+    }
+
+    if (subTextRef.current) {
+      subTextRef.current.classList.add("animate-float-in");
+    }
+
+    if (buttonRef.current) {
+      buttonRef.current.classList.add("animate-float-in");
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const Links = [
     {
       name: "Levegő BéEnBé",
@@ -32,20 +74,30 @@ const Home = () => {
   return (
     <>
       <main className="w-screen h-screen flex justify-center items-center flex-col gap-0">
-        <div className="text-[120pt] max-lg:text-[90pt] max-sm:text-[35pt] font-semibold">
+        <div
+          ref={mainTextRef}
+          className="text-[120pt] max-lg:text-[90pt] max-sm:text-[35pt] font-semibold"
+        >
           Infoctopus
         </div>
-        <div className="text-2xl max-md:text-xl text-center">
+        <div
+          ref={subTextRef}
+          className="text-2xl max-md:text-xl text-center"
+        >
           Forradalmi weboldalak a jövő technikusaitól
         </div>
         <Link
+          ref={buttonRef}
           href={"/about"}
           className="bg-[#4043FC] py-2 px-4 rounded-xl mt-10 select-none"
         >
           Tudj meg többet
         </Link>
       </main>
-      <section className="min-h-screen w-screen flex justify-center items-center flex-col pt-[80px] max-[900px]:mb-20">
+      <section
+        ref={sectionRef}
+        className="min-h-screen w-screen flex justify-center items-center flex-col pt-[80px] max-[900px]:mb-20"
+      >
         <div className="bg-[#2F2D2D] max-w-[900px] w-full h-fit rounded-3xl relative p-10 pb-14 mt-5">
           <div className="flex flex-shrink-0 max-[900px]:flex-col">
             <div className="absolute top-[-90px] left-0 text-7xl max-md:text-4xl max-[900px]:text-center max-[900px]:w-full font-semibold">
@@ -55,7 +107,7 @@ const Home = () => {
               <h1 className="text-3xl font-semibold ">Levegő BéEnBé</h1>
               <p>
                 A projekt 2024. szeptember 17-én indult a HSZC Szentesi Pollák
-                Antal Technikum Info I.-es terméból projektmunka órán.
+                Antal Technikum Info I.-es terméből projektmunka órán.
               </p>
               <p>
                 A weboldal a Next.js keretrendszeren fut PayloadCMS backend-el
