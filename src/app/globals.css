@@ -62,6 +62,7 @@
   }
   body {
     background: linear-gradient(180deg, #f374e2 0%, #6b0d85 50%, #2a0135 100%);
+    background-repeat: no-repeat;
   }
   /* width */
   ::-webkit-scrollbar {

@@ -17,10 +17,10 @@ const SiteLink = ({
     <Link
       href={link}
       target="_blank"
-      className=" size-44 rounded-xl bg-[#1F1F1F] flex justify-center items-center relative"
+      className=" size-44 rounded-xl bg-[#1F1F1F] flex justify-center items-center relative mb-10"
     >
       <Image src={image} alt={name} width={70} height={70} />
-      <div className="absolute -bottom-7 text-center w-[300px] text-lg font-semibold">
+      <div className="absolute -bottom-7 text-center w-fit text-nowrap text-lg font-semibold">
         {description}
       </div>
     </Link>

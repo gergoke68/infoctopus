@@ -32,24 +32,26 @@ const Home = () => {
   return (
     <>
       <main className="w-screen h-screen flex justify-center items-center flex-col gap-0">
-        <div className="text-[120pt] font-semibold">Infoctopus</div>
-        <div className="text-2xl">
+        <div className="text-[120pt] max-lg:text-[90pt] max-sm:text-[35pt] font-semibold">
+          Infoctopus
+        </div>
+        <div className="text-2xl max-md:text-xl text-center">
           Forradalmi weboldalak a jövő technikusaitól
         </div>
         <Link
           href={"/about"}
-          className="bg-[#4043FC] py-2 px-4 rounded-xl mt-10"
+          className="bg-[#4043FC] py-2 px-4 rounded-xl mt-10 select-none"
         >
           Tudj meg többet
         </Link>
       </main>
-      <section className="h-screen w-screen flex justify-center items-center flex-col pt-[80px]">
+      <section className="min-h-screen w-screen flex justify-center items-center flex-col pt-[80px] max-[900px]:mb-20">
         <div className="bg-[#2F2D2D] max-w-[900px] w-full h-fit rounded-3xl relative p-10 pb-14 mt-5">
-          <div className="flex flex-shrink-0">
-            <div className="absolute top-[-90px] left-0 text-7xl font-semibold">
+          <div className="flex flex-shrink-0 max-[900px]:flex-col">
+            <div className="absolute top-[-90px] left-0 text-7xl max-md:text-4xl max-[900px]:text-center max-[900px]:w-full font-semibold">
               Fő projektünk
             </div>
-            <span className="">
+            <div className="max-w-[400px]">
               <h1 className="text-3xl font-semibold ">Levegő BéEnBé</h1>
               <p>
                 A projekt 2024. szeptember 17-én indult a HSZC Szentesi Pollák
@@ -64,20 +66,20 @@ const Home = () => {
                 A weboldal 2025. január 17.-én készül el, addig az alábbi
                 linkeken elérhető a fejlesztési folyamat:
               </p>
-            </span>
+            </div>
 
-            <Image
-              src={"/project-image.png"}
-              className="rounded-3xl flex-shrink-0"
-              alt="airbnb"
-              width={400}
-              height={300}
-            />
+            <div className="flex-shrink-0">
+              <Image
+                src={"/project-image.png"}
+                className="rounded-3xl flex-shrink-0"
+                alt="airbnb"
+                width={400}
+                height={300}
+              />
+            </div>
           </div>
-          <div className="ml-[500px] text-white/70">
-            Egy lakás oldal template
-          </div>
-          <div className="flex justify-between mt-10">
+
+          <div className="flex justify-between mt-10 max-[900px]:flex-col max-[900px]:items-center">
             {Links.map((link) => {
               return (
                 <SiteLink
