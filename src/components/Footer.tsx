@@ -38,9 +38,9 @@ const Footer = () => {
             <div className="flex flex-col gap-3">
               {socials.map((social) => {
                 return (
-                  <div className="flex gap-2" key={social.title}>
+                  <div className="flex gap-2" key={social.value}>
                     <social.icon color={social.color} />
-                    {social.title}
+                    {social.value}
                   </div>
                 );
               })}
