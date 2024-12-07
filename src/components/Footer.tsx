@@ -7,30 +7,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import { socials } from "@/config";
 
 const Footer = () => {
   const pages = [
     { name: "Főoldal", path: "/" },
     { name: "Elérhetőségek", path: "/about" },
     { name: "Rólunk", path: "/contact" },
-  ];
-
-  const socials = [
-    {
-      title: "+36 63 562 280",
-      icon: Smartphone,
-      color: "black",
-    },
-    {
-      title: "@infoc.topus",
-      icon: InstagramIcon,
-      color: "orchid",
-    },
-    {
-      title: "help@infoctopus.com",
-      icon: Mail,
-      color: "crimson",
-    },
   ];
 
   const creators = ["Gombár Martin", "Fabó Dudás Róbert", "Gémes Gergő"];
