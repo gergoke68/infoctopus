@@ -40,3 +40,30 @@ export const teamMembers = [
     alt: "Gémes Gergő",
   },
 ];
+
+export const Links = [
+  {
+    name: "Levegő BéEnBé",
+    description: "Development oldal",
+    image: "/flood.svg",
+    link: "https://berles.gemes.eu/ ",
+  },
+  {
+    name: "Figma",
+    description: "Figma - dizájn",
+    image: "/figma_logo.svg",
+    link: "https://www.figma.com/design/PG29cx0CPSSPaUGA1EnXQb/Lakásbérlés?node-id=177-111&t=kgUvxpevGtyb6EFS-1",
+  },
+  {
+    name: "Notion",
+    description: "Notion - task manager",
+    image: "/notion.svg",
+    link: "https://fuschia-bonsai-488.notion.site/Lak-sb-rl-oldal-99198df203fc43aa9efdd9b9e0ebeb21?pvs=4",
+  },
+  {
+    name: "GitHub",
+    description: "Github - forráskód",
+    image: "/github.svg",
+    link: "https://github.com/Kedves1/Lakasberles/",
+  },
+];
