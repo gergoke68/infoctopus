@@ -5,9 +5,9 @@ import { teamMembers } from "@/config";
 const About = () => {
   return (
     <section className="min-h-screen w-screen flex justify-center items-center flex-col py-36 max-[900px]:mb-20">
-      <div className="bg-[#2F2D2D] max-w-[1300px] w-full h-fit rounded-3xl relative p-6 md:p-24 pt-14 pb-14 pr-6 md:pr-24 mt-5">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="text-3xl max-md:text-4xl text-center md:text-left md:w-1/2 font-black">
+      <div className="bg-[#2F2D2D] max-w-[1300px] w-full h-fit rounded-3xl relative p-12">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="text-3xl max-md:text-4xl flex-grow text-center md:text-left md:w-1/2 font-black">
             Rólunk
             <div className="max-w-[700px] text-lg font-normal mt-4">
               <p>
@@ -23,7 +23,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="bg-[#1F1F1F] h-fit rounded-3xl p-5 mt-5 md:mt-0 md:ml-5 flex justify-center items-center">
+          <div className="bg-[#1F1F1F] float-right h-fit rounded-3xl p-5 mt-5 md:mt-0 md:ml-5 flex justify-center items-center">
             <div className="text-center">
               <Image
                 src={"/logo.svg"}

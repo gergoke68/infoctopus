@@ -31,18 +31,18 @@ const Header = () => {
       <div className="max-[750px]:hidden">
         <ul className="flex gap-5 text-3xl items-center">
           <li>
-            <Link
-              href={"/contact"}
-              className={cn({ "text-slate-500": pathname === "/contact" })}
-            >
+            <Link href={"/contact"} className=" relative">
+              {pathname === "/contact" && (
+                <div className="w-full h-0.5 bg-white absolute bottom-0 left-0 link-rotate"></div>
+              )}
               Elérhetőségek
             </Link>
           </li>
           <li>
-            <Link
-              href={"/about"}
-              className={cn({ "text-slate-500": pathname === "/about" })}
-            >
+            <Link href={"/about"} className=" relative">
+              {pathname === "/about" && (
+                <div className="w-full h-0.5 bg-white absolute bottom-0 left-0 link-rotate"></div>
+              )}
               Rólunk
             </Link>
           </li>
@@ -66,14 +66,7 @@ const Header = () => {
                   </Link>
                 </span>
                 <span>
-                  <Link
-                    href={"/contact"}
-                    className={cn({
-                      "text-slate-500": pathname === "/contact",
-                    })}
-                  >
-                    Elérhetőségek
-                  </Link>
+                  <Link href={"/contact"}>Elérhetőségek</Link>
                 </span>
                 <span>
                   <Link
