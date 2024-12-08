@@ -80,10 +80,7 @@ const Home = () => {
         >
           Infoctopus
         </div>
-        <div
-          ref={subTextRef}
-          className="text-2xl max-md:text-xl text-center"
-        >
+        <div ref={subTextRef} className="text-2xl max-md:text-xl text-center">
           Forradalmi weboldalak a jövő technikusaitól
         </div>
         <Link
@@ -104,7 +101,7 @@ const Home = () => {
               Fő projektünk
             </div>
             <div className="max-w-[400px]">
-              <h1 className="text-3xl font-semibold ">Levegő BéEnBé</h1>
+              <h1 className="text-3xl font-semibold">Levegő BéEnBé</h1>
               <p>
                 A projekt 2024. szeptember 17-én indult a HSZC Szentesi Pollák
                 Antal Technikum Info I.-es terméből projektmunka órán.

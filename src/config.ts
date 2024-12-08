@@ -20,3 +20,23 @@ export const socials = [
     color: "firebrick",
   },
 ];
+export const teamMembers = [
+  {
+    name: "Gombár Martin",
+    role: "Front- és backend fejlesztő",
+    image: "/martin.png",
+    alt: "Gombár Martin",
+  },
+  {
+    name: "Fabó Dudás Róbert",
+    role: "Weboldal dizájner",
+    image: "/robert.png",
+    alt: "Fabó Dudás Róbert",
+  },
+  {
+    name: "Gémes Gergő",
+    role: "Adatbázis és hosting kezelő",
+    image: "/gergo.png",
+    alt: "Gémes Gergő",
+  },
+];
