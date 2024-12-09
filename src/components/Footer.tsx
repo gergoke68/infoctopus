@@ -11,8 +11,8 @@ import { socials } from "@/config";
 const Footer = () => {
   const pages = [
     { name: "Főoldal", path: "/" },
-    { name: "Elérhetőségek", path: "/about" },
-    { name: "Rólunk", path: "/contact" },
+    { name: "Elérhetőségek", path: "/contact" },
+    { name: "Rólunk", path: "/about" },
   ];
 
   const creators = ["Gombár Martin", "Fabó Dudás Róbert", "Gémes Gergő"];

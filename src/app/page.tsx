@@ -68,7 +68,7 @@ const Home = () => {
       </main>
       <section
         ref={sectionRef}
-        className="min-h-screen w-screen flex justify-center items-center flex-col pt-[80px] max-[900px]:mb-20"
+        className="min-h-screen w-screen flex justify-center items-center flex-col pt-[80px] mb-20"
       >
         <div className="bg-[#2F2D2D] max-w-[900px] w-full h-fit rounded-3xl relative p-10 pb-14 mt-5">
           <div className="flex flex-shrink-0 max-[900px]:flex-col">
